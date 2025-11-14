@@ -1,0 +1,19 @@
+// Login Function
+function login(userName, password) {
+    let users = ["hema", "sree", "john", "alex"]; // existing users
+
+    if (!users.includes(userName)) {
+        return "User Not Found, Please Signup";
+    } 
+    
+    if (password !== "Emp@123") {
+        return "Wrong Password....";
+    }
+
+    return "Login Successful...";
+}
+
+// Test
+console.log(login("hema", "Emp@123"));   // success
+console.log(login("hema", "wrong"));     // wrong password
+console.log(login("newUser", "Emp@123"));// user not found
